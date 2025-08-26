@@ -1,5 +1,5 @@
 import Digitalclock from "./components/digitalClock";
-import "./app.css";
+import "./App.css";
 
 const App = () => {
   return (
@@ -9,4 +9,4 @@ const App = () => {
   )
 }
 
-export default App
+export default App;
