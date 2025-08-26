@@ -1,12 +1,31 @@
-import Digitalclock from "./components/digitalClock";
+import { useState, useEffect } from "react";
 import "./App.css";
 
+
 const App = () => {
+  const [ time, setTime ] = useState(new Date());
+
+  useEffect(() => {
+    const timeInterval = setInterval(() => {
+      setTime(new Date());
+    }, 1000);
+
+    return () => clearInterval(timeInterval);
+  }, []);
   return (
     <>
-      <Digitalclock />
+      <div className='clock-container'>
+        <div className='cover'></div>
+        <p className='date'>{time.toDateString()}</p>
+        <div className='time'>
+          <span className='clock'>{time.getHours()}:</span>
+          <span className='clock'>{time.getMinutes()}:</span>
+          <span className='secs'>{time.getSeconds()}</span>
+        </div>
+        <p className='date'>{time.toLocaleTimeString()}</p>
+      </div>
     </>
-  )
+  );
 }
 
 export default App;

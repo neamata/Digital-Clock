@@ -1,70 +1,43 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 body {
   margin: 0;
-  font-family: "Segoe UI", "Roboto", sans-serif;
-  background: black;
-  background-size: 20px 50px, 100px 10px;
+  padding: 0;
+  background: #0f172a; /* dark background */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f8fafc; /* light text */
   display: flex;
-  align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  color: rgb(18, 17, 68);
-  text-shadow: 1px 1px 2px rgb(255, 255, 255);
-  -webkit-text-stroke: 1px rgb(0, 0, 0);
-  font-family: monospace;
-  background-blend-mode: color-burn;
-}
-.clock-container {
-  padding: 20px;
-  border-radius: 50%;
-  background-color: rgb(125, 130, 148);
-  background-size: 3px 5px;
-  box-shadow: inset 5px 5px 5px rgb(0, 0, 0), inset -5px -5px 5px rgb(0, 0, 0);
-  height: 250px;
-  width: 250px;
-  position: relative;
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
   align-items: center;
+  height: 100vh;
+}
+
+.clock-container {
+  background: #1e293b;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
   text-align: center;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
 }
-.cover {
-  position: absolute;
-  top: 5%;
-  left: 5%;
-  width: 90%;
-  height: 90%;
-  box-shadow: inset 5px 5px rgb(5, 5, 5), inset -5px -5px rgb(5, 5, 5);
-  background-color: rgba(0, 2, 10, 0.363);
-  background: conic-gradient(
-    rgb(185, 185, 199),
-    rgb(205, 205, 243),
-    rgb(139, 147, 177),
-    rgb(139, 141, 175)
-  );
-  opacity: 0.3;
-  border-radius: 50%;
-}
+
 .date {
-  font-size: 1rem;
-  font-weight: 900;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: #94a3b8;
 }
 
 .time {
-  padding: 10px 0;
-  border-radius: 30px;
-  background: rgb(0, 0, 69);
-  color: #fff;
-  font-size: 2rem;
-  font-weight: 900;
-  text-shadow: 1px 1px 2px rgb(91, 109, 161);
-  -webkit-text-stroke: 1px rgb(0, 0, 0);
-  box-shadow: 3px 5px 5px rgb(5, 5, 5);
+  font-size: 3rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
 }
+
+.clock {
+  color: #38bdf8; /* cyan */
+  margin: 0 0.2rem;
+}
+
 .secs {
-  font-size: 1rem;
+  color: #f87171; /* red */
+  font-size: 2rem;
 }
